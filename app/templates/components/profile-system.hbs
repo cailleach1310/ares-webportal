@@ -11,6 +11,10 @@
     <li><a data-toggle="tab" href="#systemgoals">Goals</a></li>
   {{/if}}
 
+  {{#if char.marque}}
+    <li><a data-toggle="tab" href="#systemmarque">Marque</a></li>
+  {{/if}}
+
   {{#if char.background}}
       <li><a data-toggle="tab" href="#systembg">Background</a></li> 
   {{/if}}
@@ -72,7 +76,13 @@
    </div>
   {{/if}} 
   
-  {{#if char.background}}
+  {{#if char.marque}}
+  <div id="systemmarque" class="tab-pane fade">
+      {{{ansi-format text=char.marque}}}
+   </div>
+  {{/if}} 
+
+{{#if char.background}}
   <div id="systembg" class="tab-pane fade">
       {{{ansi-format text=char.background}}}
    </div>
