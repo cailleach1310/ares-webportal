@@ -7,6 +7,10 @@
   
   <li><a data-toggle="tab" href="#systemhooks">RP Hooks</a></li>
 
+  {{#if char.goals}}
+    <li><a data-toggle="tab" href="#systemgoals">Goals</a></li>
+  {{/if}}
+
   {{#if char.background}}
       <li><a data-toggle="tab" href="#systembg">Background</a></li> 
   {{/if}}
@@ -62,6 +66,11 @@
       {{{ansi-format text=char.rp_hooks}}}
   </div>
   
+  {{#if char.goals}}
+  <div id="systemgoals" class="tab-pane fade">
+      {{{ansi-format text=char.goals}}}
+   </div>
+  {{/if}} 
   
   {{#if char.background}}
   <div id="systembg" class="tab-pane fade">
