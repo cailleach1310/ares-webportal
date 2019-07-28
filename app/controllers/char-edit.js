@@ -40,6 +40,7 @@ export default Controller.extend({
             id: this.get('model.id'),
             demographics: demographics,
             rp_hooks: this.get('model.rp_hooks'),
+            goals: this.get('model.goals'),
             relationships: relationships,
             relationships_category_order: this.get('model.relationships_category_order'),
             gallery: gallery,
