@@ -1,16 +1,17 @@
 import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default Controller.extend({    
     gameApi: service(),
     flashMessages: service(),
-    genders: function() {
+    genders: computed(function() {
       let list = [];
       this.get('model.cgInfo.genders').forEach(function(g) {
         list.push({ value: g });
       });
       return list;
-    }.property(),
+    }),
   
     buildQueryDataForChar: function() {
         let demographics = {};
@@ -38,12 +39,7 @@ export default Controller.extend({
         if (!Array.isArray(tags)) {
             tags = tags.split(/[\s,]/);
         }
-        
-        let gallery = this.get('model.char.gallery').map(g => g.path);
-        
-        let profile_image = this.get('model.char.profile_image.name');
-        let profile_icon = this.get('model.char.profile_icon.name');
-
+                
         return { 
             id: this.get('model.char.id'),
             demographics: demographics,
@@ -51,12 +47,12 @@ export default Controller.extend({
             goals: this.get('model.char.goals'),
             relationships: relationships,
             relationships_category_order: this.get('model.char.relationships_category_order'),
-            gallery: gallery,
             profile: profile,
             bg_shared: this.get('model.char.bg_shared'),
             lastwill: this.get('model.char.lastwill'),
-            profile_image: profile_image,
-            profile_icon: profile_icon,
+            profile_image: this.get('model.char.profile_image.name'),
+            profile_icon: this.get('model.char.profile_icon.name'),
+            profile_gallery: this.get('model.char.profile_gallery'),
             tags: tags
         };
     }, 
@@ -76,9 +72,6 @@ export default Controller.extend({
                     this.get('model.char.files').pushObject( { name: name, path: `${folder}/${name}` });
                 }
             }
-        },
-        galleryChanged(files) {
-            this.set('model.char.gallery', files);
         },
         genderChanged(val) {
             this.set('model.char.demographics.gender.value', val.value);

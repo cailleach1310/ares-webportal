@@ -1,5 +1,5 @@
-import EmberObject from '@ember/object';
 import Component from '@ember/component';
+import { set, computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import AuthenticatedController from 'ares-webportal/mixins/authenticated-controller';
 
@@ -10,30 +10,49 @@ export default Component.extend(AuthenticatedController, {
     confirmDeleteScene: false,
     selectLocation: false,
     managePoseOrder: false,
+    characterCard: false,
     newLocation: null,
-    poseType: { title: 'Pose', id: 'pose' },
+    poseType: null,
     poseChar: null,
     gameApi: service(),
     flashMessages: service(),
     gameSocket: service(),
     session: service(),
-    
+
+    init: function() {
+      this._super(...arguments);
+      this.set('poseType', { title: 'Pose', id: 'pose' });
+    },
+      
     didInsertElement: function() {
       this.set('poseChar', this.get('scene.poseable_chars')[0]);
     },
     
-    poseTypes: function() {
+    poseTypes: computed(function() {
       return [
         { title: 'Pose', id: 'pose' },
         { title: 'GM Emit', id: 'gm' },
         { title: 'Scene Set', id: 'setpose' }
       ];
-    }.property(),
+    }),
     
-    poseOrderTypes: function() {
+    poseOrderTypes: computed(function() {
       return [ '3-per', 'normal' ];
-    }.property(),
+    }),
+    
+    characterCardInfo: computed('characterCard', function() {
+      let participant = this.get('scene.participants').find(p => p.name == this.characterCard);
+      return participant ? participant.char_card : {};
+    }),
   
+    txtExtraInstalled: computed(function() {
+      return this.get('scene.extras_installed').some(e => e == 'txt');
+    }),
+    
+    cookiesExtraInstalled: computed(function() {
+      return this.get('scene.extras_installed').some(e => e == 'cookies');
+    }),
+    
     actions: { 
       locationSelected(loc) {
           this.set('newLocation', loc);  
@@ -59,10 +78,10 @@ export default Component.extend(AuthenticatedController, {
       },
       
       editScenePose(scenePose) { 
-          Ember.set(scenePose, 'editActive', true);
+          set(scenePose, 'editActive', true);
       },
       cancelScenePoseEdit(scenePose) {
-          Ember.set(scenePose, 'editActive', false);
+          set(scenePose, 'editActive', false);
       },
       deleteScenePose() {
           let api = this.gameApi;
@@ -99,8 +118,8 @@ export default Component.extend(AuthenticatedController, {
               this.flashMessages.danger("You haven't entered anything.");
               return;
           }
-          Ember.set(scenePose, 'editActive', false);
-          Ember.set(scenePose, 'pose', pose);
+          set(scenePose, 'editActive', false);
+          set(scenePose, 'pose', pose);
 
           let api = this.gameApi;
           api.requestOne('editScenePose', { scene_id: this.get('scene.id'),
@@ -109,7 +128,7 @@ export default Component.extend(AuthenticatedController, {
               if (response.error) {
                   return;
               }
-              Ember.set(scenePose, 'pose', response.pose);
+              set(scenePose, 'pose', response.pose);
           });
           this.set('scenePose', '');
       },
