@@ -1,0 +1,31 @@
+{{title 'Notes'}}
+<h1>Notes - {{model.name}}</h1>
+
+
+<ul class="nav nav-tabs">
+    {{#each model.notes as |section index| }}
+        <li class="{{if (eq index 0) 'active' }}"><a data-toggle="tab" href="#{{section.key}}">{{section.name}} Notes</a></li>
+    {{/each}}
+</ul>
+
+
+<div class="tab-content">
+
+  
+  {{#each model.notes as |section index|}}
+  
+  <div id="{{section.key}}" class="tab-pane {{if (eq index 0) 'active' }}">
+      <AnsiFormat @text={{section.notes}} />
+  </div>
+  
+  {{/each}}
+  
+ </div>
+ 
+ <div class="pull-right">
+         <LinkTo @route="char" @model={{model.name}} class="btn btn-default">Back</LinkTo>  
+           
+         {{#if model.can_edit}}
+           <LinkTo @route="notes-edit" @model={{model.name}} class="btn btn-primary">Edit</LinkTo>
+         {{/if}}
+ </div>

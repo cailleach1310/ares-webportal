@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col col-xs-4">
-    {{char-icon char=char}}
+    <CharIcon @char={{char}} />
 
     {{#if char.id}}
-    {{#link-to 'char' char.name target="_blank"}}View Full Profile{{/link-to}}
+    <LinkTo @route="char" @model={{char.name}} @target="_blank">View Full Profile</LinkTo>
     {{/if}}
     
   </div>  
@@ -19,6 +19,9 @@
           </div>
       </div>
       {{/each}}
+      {{#if (not char.demographics)}}
+      No demographics available.  Try reloading the scene page.
+      {{/if}}
     {{/if}}
     
     {{#if char.status_message}}
@@ -34,8 +37,9 @@
     
 <div class="row">
   <div class="col col-xs-12">
-    
-    {{{ansi-format text=char.description}}}
+    {{#if char.description}}
+    <AnsiFormat @text={{char.description}} />
+    {{/if}}
     
   </div>
 </div>

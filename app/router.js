@@ -1,5 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
+import setupCustomRoutes from 'ares-webportal/custom-routes';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -7,7 +8,7 @@ const Router = EmberRouter.extend({
     
  init() {
       this._super(...arguments);
-      this.on('routeDidChange', transition => {
+      this.on('routeDidChange', function() {
         window.scrollTo(0, 0);
       });
     }
@@ -15,7 +16,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('home', { path: ''});
-
+  
   this.route('account');
   this.route('achievements');
   this.route('admins');
@@ -73,6 +74,8 @@ Router.map(function() {
   this.route('mail-message', { path: '/mail/:id'});
   this.route('mail-send');
   this.route('manage');
+  this.route('notes', { path: '/char/:id/notes' });
+  this.route('notes-edit', { path: '/char/:id/notes/edit' });
   this.route('notifications');
   this.route('play');
   this.route('players');
@@ -101,6 +104,7 @@ Router.map(function() {
   this.route('search-chars');
   this.route('search-help');
   this.route('search-forum');
+  this.route('server-info');
   this.route('setup');
   this.route('setup-colors');
   this.route('shutdown');
@@ -116,6 +120,8 @@ Router.map(function() {
   this.route('wiki-source', { path: '/wiki/:page_id/source/:version_id'});
   this.route('wiki-tag', { path: '/wiki/tag/:id'});
   this.route('wiki-tags', { path: '/wiki/tags'});
+
+  setupCustomRoutes(this);
 
   // !!!!!!!!!!!!!!!!!!!!!!!!
   // This must be at the end
