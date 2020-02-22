@@ -5,6 +5,7 @@
         <li><a data-toggle="tab" href="#profile">Profile</a></li>
         <li><a data-toggle="tab" href="#relationships">Relationships</a></li>
         <li><a data-toggle="tab" href="#hooks">RP Hooks</a></li>
+        <li><a data-toggle="tab" href="#goals">Goals</a></li>
         <li><a data-toggle="tab" href="#files">Files</a></li>
         <CharEditCustomTabs @char={{model}} />
     </ul>
@@ -173,6 +174,9 @@
         <CharEditCustom @char={{model.char}} @updateCallback={{customUpdateCallback}} />
         
       
+        <div id="goals" class="tab-pane fade in">
+          {{markdown-editor text=model.goals}}
+        </div>
         <div id="files" class="tab-pane fade in">
             <div class="cg-tip">Files for your character page need to be in a folder matching your character's name.  They will show up in the gallery and profile image selection lists.  See [Icons](/help/icons) for tips on sizing your profile image.</div>
             <hr>
