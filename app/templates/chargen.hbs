@@ -183,8 +183,10 @@
                          
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
-               <MarkdownEditor @text={{model.char.marque}} />
-               <MarkdownEditor @text={{model.char.scion}} />
+               <p> <i>Marque Status (%):</i> </p>
+               <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
+               <p> <i>Scion:</i> </p>
+               <Input @type="text" @size={{25}} @value={{model.char.scion}} />
            </div>
 
 <ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />
