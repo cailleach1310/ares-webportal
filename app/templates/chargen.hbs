@@ -60,6 +60,7 @@
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
        <li role="presentation"><a href="#descs" aria-controls="misc" role="tab" data-toggle="tab">Descriptions</a></li>
        <li role="presentation"><a href="#lastwill" aria-controls="misc" role="tab" data-toggle="tab">Last Will</a></li>
+       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special</a></li>
        <ChargenCustomTabs @char={{model}} />
      </ul>
      
@@ -178,7 +179,15 @@
                <MarkdownEditor @text={{model.char.lastwill}} />
            </div>
            
-           <ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />
+          <div role="tabpanel" class="tab-pane" id="special">
+                         
+               <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
+               <br>
+               <MarkdownEditor @text={{model.char.marque}} />
+               <MarkdownEditor @text={{model.char.scion}} />
+           </div>
+
+<ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />
                
        </div>
      
