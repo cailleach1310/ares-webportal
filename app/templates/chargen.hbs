@@ -186,7 +186,7 @@
                <p> <i>Marque Status (%):</i> </p>
                {{#if (eq model.char.ranks_rank 'Adept')}}
                    <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
-               {{else}} <p> Not required <i>(This isn't an adept concept). </i></p>
+               {{else}} <p> Not required <i>(This isn't an adept concept). </i> If it is, make sure to set the rank to Adept on the groups tab and save, before entering your marque status here.</p>
                {{/if}}
                <br>
                <br>
