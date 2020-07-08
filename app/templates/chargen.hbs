@@ -184,7 +184,7 @@
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <i>Marque Status (%):</i> </p>
-               {{#if (eq model.char.ranks_rank 'Adept')}}
+               {{#if (eq model.ranks_rank 'Adept')}}
                    <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
                {{else}} <p> <b>This isn't an adept. </b></p>
                {{/if}}
