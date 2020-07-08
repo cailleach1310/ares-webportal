@@ -186,9 +186,9 @@
                <p> <i>Marque Status (%):</i> </p>
                <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
                <br>
-               <p> <i>Scion:</i> </p>
                <br>
-               <PowerSelect @selected={{model.char.custom.scion}} @searchField="value" @options={{scions}} @onchange={{action "scionChanged"}} as |scion|>
+               <p> <i>Scion:</i> </p>
+               <PowerSelect @selected={{model.char.scion}} @searchField="value" @options={{scions}} @onchange={{action "scionChanged"}} as |scion|>
                    {{scion.value}}
                </PowerSelect>
            </div>
