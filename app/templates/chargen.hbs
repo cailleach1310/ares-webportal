@@ -54,7 +54,7 @@
         {{#if traitsExtraInstalled}}
        <li role="presentation"><a href="#traits" aria-controls="misc" role="tab" data-toggle="tab">Traits</a></li>
        {{/if}}
-       
+       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special</a></li>
        <li role="presentation"><a href="#bg" aria-controls="misc" role="tab" data-toggle="tab">Background</a></li>
        <li role="presentation"><a href="#hooks" aria-controls="misc" role="tab" data-toggle="tab">RP Hooks</a></li>
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
@@ -178,14 +178,22 @@
                <br>
                <MarkdownEditor @text={{model.char.lastwill}} />
            </div>
-           
+
+  	def scions
+    	Global.read_config("custom", "scion_list")
+  	end
+
           <div role="tabpanel" class="tab-pane" id="special">
                          
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <i>Marque Status (%):</i> </p>
                <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
+               <br>
                <p> <i>Scion:</i> </p>
+               <PowerSelect @selected={{get scions key}} @options={{get (get scions key) "values"}} @searchField="value" @allowClear={{true}} @onchange={{action "groupChanged" key}} as |g|>
+                        {{g.value}} {{if g.desc '-'}} {{g.desc}}
+                      </PowerSelect>
                <Input @type="text" @size={{25}} @value={{model.char.scion}} />
            </div>
 
