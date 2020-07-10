@@ -40,15 +40,6 @@ export default Controller.extend({
       return list;
     }),
 
-   scions: computed(function() {
-      let list = [];
-    	scionList = Global.read_config("custom", "scion_list")
-      scionList.forEach(function(g) {
-        list.push({ value: g });
-      });
-      return list;
-    }),
-
   traitsExtraInstalled: computed(function() {
       return this.get('model.app.game.extra_plugins').any(e => e == 'traits');
     }),
@@ -81,8 +72,6 @@ export default Controller.extend({
             profile_image: this.get('model.char.profile_image'),
             background: this.get('model.char.background'),
             lastwill: this.get('model.char.lastwill'),
-            scion: this.get('model.char.scion'),
-            marque: this.get('model.char.marque'),
             fs3: fs3,
             custom: custom,
             traits: traits
@@ -96,11 +85,7 @@ export default Controller.extend({
         genderChanged(val) {
            this.set('model.char.demographics.gender.value', val.value);
         },
-        
-        scionChanged(val) {
-           this.set('model.char.scion.value', val.value);
-        },
-      
+              
         groupChanged(group, val) {
           if (val) {
             this.set(`model.char.groups.${group}`, val);
