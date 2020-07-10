@@ -60,7 +60,6 @@
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
        <li role="presentation"><a href="#descs" aria-controls="misc" role="tab" data-toggle="tab">Descriptions</a></li>
        <li role="presentation"><a href="#lastwill" aria-controls="misc" role="tab" data-toggle="tab">Last Will</a></li>
-       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special</a></li>
        <ChargenCustomTabs @char={{model}} />
      </ul>
      
@@ -184,10 +183,7 @@
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <i>Marque Status (%):</i> </p>
-               {{#if (eq model.char.ranks_rank 'Adept')}}
-                   <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
-               {{else}} <p> Not required <i>(This isn't an adept concept). </i> If it is, make sure to set the rank to Adept on the groups tab and save, before entering your marque status here.</p>
-               {{/if}}
+               <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
                <br>
                <br>
                <p> <i>Scion:</i> </p>
