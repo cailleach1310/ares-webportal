@@ -55,7 +55,7 @@
        <li role="presentation"><a href="#traits" aria-controls="misc" role="tab" data-toggle="tab">Traits</a></li>
        {{/if}}
        
-       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special</a></li>
+       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special Settings</a></li>
        <li role="presentation"><a href="#bg" aria-controls="misc" role="tab" data-toggle="tab">Background</a></li>
        <li role="presentation"><a href="#hooks" aria-controls="misc" role="tab" data-toggle="tab">RP Hooks</a></li>
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
@@ -181,11 +181,13 @@
            
           <div role="tabpanel" class="tab-pane" id="special">
                          
+               {{#if (model.char.is_adept?) }}
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <b>Marque Status (%):</b> </p>
                <MarkdownEditor @text={{model.char.marque}} />
                <br>
+               {{/if}}
                <br>
                <p> <b>Scion Power:</b> </p>
                <MarkdownEditor @text={{model.char.scion}} />
