@@ -40,6 +40,15 @@ export default Controller.extend({
       return list;
     }),
 
+    scions: computed(function() {
+      let list = [];
+    	scionList = Global.read_config("custom", "scion_list")
+      this.get(scionList.forEach(function(g) {
+        list.push({ value: g });
+      });
+      return list;
+    }),
+
   traitsExtraInstalled: computed(function() {
       return this.get('model.app.game.extra_plugins').any(e => e == 'traits');
     }),
@@ -84,6 +93,10 @@ export default Controller.extend({
         
         genderChanged(val) {
            this.set('model.char.demographics.gender.value', val.value);
+        },
+              
+        scionChanged(val) {
+           this.set('model.char.scion.value', val.value);
         },
               
         groupChanged(group, val) {
