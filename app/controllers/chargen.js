@@ -43,7 +43,7 @@ export default Controller.extend({
     scions: computed(function() {
       let list = [];
     	scionList = Global.read_config("custom", "scion_list")
-      this.get(scionList.forEach(function(g) {
+      this.get(scionList).forEach(function(g) {
         list.push({ value: g });
       });
       return list;
