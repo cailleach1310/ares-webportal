@@ -181,7 +181,7 @@
            
           <div role="tabpanel" class="tab-pane" id="special">
                          
-               {{#if (model.char.is_adept?) }}
+               {{#if (eq model.char.ranks_rank 'Adept') }}
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <b>Marque Status (%):</b> </p>
