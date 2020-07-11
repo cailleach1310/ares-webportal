@@ -190,7 +190,9 @@
                {{/if}}
                <br>
                <p> <b>Scion Power:</b> </p>
-               <MarkdownEditor @text={{model.char.scion}} />
+               <PowerSelect @selected={{model.char.scion}} @searchField="value" @options={{scions}} @onchange={{action "scionChanged"}} as |scion|>
+                   {{scion.value}}
+               </PowerSelect>
            </div>
            
            <ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />
