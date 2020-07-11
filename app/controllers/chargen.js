@@ -96,7 +96,7 @@ export default Controller.extend({
         },
               
         scionChanged(val) {
-           this.set('model.char.scion.value', val.value);
+           this.set('model.char.scion', val.value);
         },
               
         groupChanged(group, val) {
