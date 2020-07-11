@@ -4,8 +4,8 @@ export default Component.extend({
   tagName: '',
   
   didInsertElement: function() {
-    let self = thi//s;
-    this.set('upda//teCallback', function() { return self.onUpdate(); } );
+    let self = this;
+    this.set('updateCallback', function() { return self.onUpdate(); } );
   },
   
 //  scions: computed(function() {
