@@ -181,13 +181,11 @@
            
           <div role="tabpanel" class="tab-pane" id="special">
                          
- #               {{#if (eq model.char.rank 'Adept') }}
                <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
                <br>
                <p> <b>Marque Status (%):</b> </p>
                <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
                <br>
-#                {{/if}}
                <br>
                <p> <b>Scion Power:</b> </p>
                <PowerSelect @selected={{model.char.scion}} @searchField="value" @options={{scions}} @onchange={{action "scionChanged"}} as |scion|>
