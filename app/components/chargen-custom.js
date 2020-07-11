@@ -4,22 +4,22 @@ export default Component.extend({
   tagName: '',
   
   didInsertElement: function() {
-    let self = this;
-    this.set('updateCallback', function() { return self.onUpdate(); } );
+    let self = thi//s;
+    this.set('upda//teCallback', function() { return self.onUpdate(); } );
   },
   
-  scions: computed(function() {
-    let list = [];
-   	scionList = Global.read_config("custom", "scion_list")
-    this.get(scionList).forEach(function(g) {
-       list.push({ value: g });
-    });
-    return list;
-  }),
+//  scions: computed(function() {
+//    let list = [];
+//   	scionList = Global.read_config("custom", "scion_list")
+//    this.get(scionList).forEach(function(g) {
+//       list.push({ value: g });
+//    });
+//    return list;
+//  }),
   
-  scionChanged(val) {
-     this.set('model.char.scion.value', val.value);
-  },
+//  scionChanged(val) {
+//     this.set('model.char.scion.value', val.value);
+//  },
 
   onUpdate: function() {
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
