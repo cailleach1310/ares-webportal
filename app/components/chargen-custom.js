@@ -16,9 +16,9 @@ scions: function() {
   return list;
 },
   
-//  scionChanged(val) {
-//     this.set('model.char.scion.value', val.value);
-//  },
+scionChanged(val) {
+   this.set('model.char.scion.value', val.value);
+},
 
   onUpdate: function() {
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
