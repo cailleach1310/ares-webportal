@@ -14,7 +14,7 @@ scions: function() {
      list.push({ value: g });
    },
   return list;
-}),
+},
   
 //  scionChanged(val) {
 //     this.set('model.char.scion.value', val.value);
