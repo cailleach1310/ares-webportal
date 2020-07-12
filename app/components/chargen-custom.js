@@ -7,14 +7,15 @@ export default Component.extend({
     let self = this;
     this.set('updateCallback', function() { return self.onUpdate(); } );
   },
-  
-scions: function() {
-  let list = [];
-  this.get(custom.scions).forEach(function(g) {
-     list.push({ value: g });
-   });
-  return list;
-},
+ 
+scions = ("Naamah","Eisheth","Camael")  
+// scions: function() {
+//   let list = [];
+//   this.get(custom.scions).forEach(function(g) {
+//     list.push({ value: g });
+//    });
+//  return list;
+//},
   
 scionChanged(val) {
    this.set('model.char.scion.value', val.value);
