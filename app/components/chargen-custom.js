@@ -8,11 +8,11 @@ export default Component.extend({
     this.set('updateCallback', function() { return self.onUpdate(); } );
   },
   
-scions: computed(function() {
+scions: function() {
   let list = [];
   this.get(custom.scions).forEach(function(g) {
      list.push({ value: g });
-   });
+   };
   return list;
 }),
   
