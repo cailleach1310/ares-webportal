@@ -188,7 +188,7 @@
                <br>
                <br>
                <p> <b>Scion Power:</b> </p>
-               <PowerSelect @selected={{model.char.scion}} @searchField="value" @options={{scions}} @onchange={{action "scionChanged"}} as |scion|>
+               <PowerSelect @selected={{model.char.scion}} @searchField="value" @options={{custom.scions}} @onchange={{action "scionChanged"}} as |scion|>
                    {{scion.value}}
                </PowerSelect>
            </div>
