@@ -12,7 +12,7 @@ scions: function() {
   let list = [];
   this.get(custom.scions).forEach(function(g) {
      list.push({ value: g });
-   };
+   },
   return list;
 }),
   
