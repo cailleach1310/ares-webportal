@@ -8,7 +8,7 @@ export default Component.extend({
     this.set('updateCallback', function() { return self.onUpdate(); } );
   },
  
-scions = ("Naamah","Eisheth","Camael"),
+<// scions = ("Naamah","Eisheth","Camael"),
 // scions: function() {
 //   let list = [];
 //   this.get(custom.scions).forEach(function(g) {
