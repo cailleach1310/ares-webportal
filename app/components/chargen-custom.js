@@ -18,13 +18,13 @@ export default Component.extend({
 //},
   
 scionChanged(val) {
-   this.set('model.char.scion.value', val.value);
+   this.set('model.char.custom.scion.value', val.value);
 },
 
   onUpdate: function() {
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
     // 
-    return { marque: this.get('model.char.marque') };
-    return { scion: this.get('model.char.scion') };
+    return { marque: this.get('model.char.custom.marque') };
+//    return { scion: this.get('model.char.custom.scion') };
   }
 });
