@@ -10,7 +10,7 @@ export default Component.extend({
  
   scions: computed(function() {
      let list = [];
-     this.get('model.custom.scions').forEach(function(g) {
+     this.get('Global.custom.scions').forEach(function(g) {
        list.push({ value: g });
      });
      return list;
