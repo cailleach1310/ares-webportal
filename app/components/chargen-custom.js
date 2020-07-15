@@ -19,7 +19,6 @@ export default Component.extend({
   onUpdate: function() {
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
     // 
-    return { marque: this.get('char.marque') };
-    return { scion: this.get('char.scion') };
+    return { marque: this.get('char.marque'), scion: this.get('char.scion') };
   }
 });
