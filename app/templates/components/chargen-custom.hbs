@@ -3,7 +3,7 @@
          <div class="cg-tip"><AnsiFormat @text="You can set some character goals here. It is not mandatory, and goals can be added or edited even after getting approved." /></div>
          <br>
          <p> <b>Character Goals:</b> </p>
-         <MarkdownEditor @text={{model.char.goals}} />
+         <MarkdownEditor @text={{char.goals}} />
   </div>
 
 <div role="tabpanel" class="tab-pane" id="special">
@@ -11,11 +11,11 @@
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{model.char.marque.value}} />
+         <Input @type="integer" @size={{25}} @value={{char.marque}} />
          <br>
          <br>
          <div class="cg-tip"><AnsiFormat @text="Those who took the advantage of Scion Power in chargen need to set their scion here." /></div>
          <br>
          <p> <b>Scion Power:</b> </p>
-         <Input @type="text" @size={{25}} @value={{model.char.scion.value}} />
+         <Input @type="text" @size={{25}} @value={{char.scion}} />
   </div>
