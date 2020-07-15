@@ -55,7 +55,6 @@
        <li role="presentation"><a href="#traits" aria-controls="misc" role="tab" data-toggle="tab">Traits</a></li>
        {{/if}}
        
-       <li role="presentation"><a href="#special" aria-controls="misc" role="tab" data-toggle="tab">Special Settings</a></li>
        <li role="presentation"><a href="#bg" aria-controls="misc" role="tab" data-toggle="tab">Background</a></li>
        <li role="presentation"><a href="#hooks" aria-controls="misc" role="tab" data-toggle="tab">RP Hooks</a></li>
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
@@ -179,23 +178,7 @@
                <MarkdownEditor @text={{model.char.lastwill}} />
            </div>
            
-          <div role="tabpanel" class="tab-pane" id="special">
-                         
-               <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
-               <br>
-               <p> <b>Marque Status (%):</b> </p>
-               <Input @type="integer" @size={{25}} @value={{model.char.custom.marque}} />
-               <br>
-               <br>
-               <p> <b>Scion Power:</b> </p>
-               <Input @type="text" @size={{25}} @value={{model.char.custom.scion}} />
-           </div>
            
-           <ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />
-               
-       </div>
-     
-     
      <div class="alert alert-success">
     
      {{#if model.cgInfo.allow_web_submit}}
