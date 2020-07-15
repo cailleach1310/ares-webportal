@@ -3,7 +3,7 @@
          <div class="cg-tip"><AnsiFormat @text={{model.custom.goals_blurb}} /></div>
          <br>
          <p> <b>Character Goals:</b> </p>
-         <MarkdownEditor @text={{model.char.custom.goals}} />
+         <MarkdownEditor @text={{model.char.goals}} />
   </div>
 
 <div role="tabpanel" class="tab-pane" id="special">
@@ -11,9 +11,9 @@
          <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{model.char.custom.marque}} />
+         <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
          <br>
          <br>
          <p> <b>Scion Power:</b> </p>
-         <Input @type="text" @size={{25}} @value={{model.char.custom.scion}} />
+         <Input @type="text" @size={{25}} @value={{model.char.scion}} />
   </div>
