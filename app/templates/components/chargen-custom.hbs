@@ -2,8 +2,8 @@
                       
          <div class="cg-tip"><AnsiFormat @text={{model.custom.goals_blurb}} /></div>
          <br>
-         <p> <b>Character Goals: (%):</b> </p>
-        {{{ansi-format text=char.custom.goals}}}
+         <p> <b>Character Goals:</b> </p>
+         <Input @type="text" @size={{25}} @value={{model.char.custom.goals}} />
   </div>
 
 <div role="tabpanel" class="tab-pane" id="special">
