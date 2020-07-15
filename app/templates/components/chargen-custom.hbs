@@ -1,4 +1,12 @@
- <div role="tabpanel" class="tab-pane" id="special">
+<div role="tabpanel" class="tab-pane" id="systemgoals">
+                      
+         <div class="cg-tip"><AnsiFormat @text={{model.custom.goals_blurb}} /></div>
+         <br>
+         <p> <b>Character Goals: (%):</b> </p>
+        {{{ansi-format text=char.custom.goals}}}
+  </div>
+
+<div role="tabpanel" class="tab-pane" id="special">
                       
          <div class="cg-tip"><AnsiFormat @text={{model.cgInfo.special_blurb}} /></div>
          <br>
