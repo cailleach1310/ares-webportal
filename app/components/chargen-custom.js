@@ -20,6 +20,6 @@ export default Component.extend({
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
     // 
     return { marque: this.get('char.marque') };
-//    return { scion: this.get('model.char.custom.scion') };
+    return { scion: this.get('char.scion') };
   }
 });
