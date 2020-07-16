@@ -184,7 +184,7 @@
              <div class="cg-tip"><AnsiFormat @text="You can set some character goals here. It is not mandatory, and goals can be added or edited even after getting approved." /></div>
              <br>
              <p> <b>Character Goals:</b> </p>
-             <MarkdownEditor @text={{model.char.goals}} />
+             <MarkdownEditor @text={{model.char.custom.goals}} />
           </div>
     
         <ChargenCustom @char={{model.char.custom}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />	
