@@ -5,6 +5,7 @@
         <li><a data-toggle="tab" href="#profile">Profile</a></li>
         <li><a data-toggle="tab" href="#relationships">Relationships</a></li>
         <li><a data-toggle="tab" href="#hooks">RP Hooks</a></li>
+        <li><a data-toggle="tab" href="#goals">Goals</a></li>
         <li><a data-toggle="tab" href="#descs">Descriptions</a></li>
         <li><a data-toggle="tab" href="#files">Files</a></li>
         <CharEditCustomTabs @char={{model}} />
@@ -19,11 +20,14 @@
       <CharEditRelationships @model={{model}} />
       <CharEditDescs @model={{model}} />
       
-
       <div id="hooks" class="tab-pane fade in">
           <MarkdownEditor @text={{model.char.rp_hooks}} />
         </div>
-        
+
+      <div id="goals" class="tab-pane fade in">
+          <MarkdownEditor @text={{model.char.goals}} />
+        </div>
+
       <CharEditCustom @char={{model.char}} @updateCallback={{customUpdateCallback}} />
         
       <CharEditFiles @model={{model}} />
