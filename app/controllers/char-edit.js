@@ -52,7 +52,7 @@ export default Controller.extend({
             id: this.get('model.char.id'),
             demographics: demographics,
             rp_hooks: this.get('model.char.rp_hooks'),
-            goals: this.get('model.char.goals'),
+     //       goals: this.get('model.char.goals'),
             relationships: relationships,
             relationships_category_order: this.get('model.char.relationships_category_order'),
             profile: profile,
