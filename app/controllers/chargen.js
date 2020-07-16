@@ -69,7 +69,7 @@ export default Controller.extend({
             desc: this.get('model.char.desc'),
             shortdesc: this.get('model.char.shortdesc'),
             rp_hooks: this.get('model.char.rp_hooks'),
-            goals: this.get('model.goals'),
+            goals: this.get('model.char.goals'),
             profile_image: this.get('model.char.profile_image'),
             background: this.get('model.char.background'),
             lastwill: this.get('model.char.lastwill'),
