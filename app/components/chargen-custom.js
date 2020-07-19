@@ -27,6 +27,6 @@ export default Component.extend({
         
         scionChanged(val) {
            this.set('model.char.custom.scion.value', val.value);
-        },
+        }
 
 });
