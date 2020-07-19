@@ -1,6 +1,6 @@
 <div role="tabpanel" class="tab-pane" id="special">
                       
-         {{#if (is_adept?(char)}}
+         {{#if (Module.custom.is_adept?(char)}}
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
