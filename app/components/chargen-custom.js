@@ -21,5 +21,13 @@ export default Component.extend({
     // 
     return { marque: this.get('char.marque'), 
             scion: this.get('char.scion') };
-  },
+  }
+
+
+actions: {      
+           scionChanged(val) {
+           this.set('model.char.custom.scion.value', val.value);
+        };
+   },
+
 });
