@@ -21,7 +21,7 @@ export default Component.extend({
     // 
     return { marque: this.get('char.marque'), 
             scion: this.get('char.scion') };
-  }
+  },
 
 
 actions: {      
