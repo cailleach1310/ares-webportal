@@ -1,11 +1,13 @@
 <div role="tabpanel" class="tab-pane" id="special">
                       
+         {{#if Custom.is_adept?(char) }}
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
          <Input @type="integer" @size={{25}} @value={{char.marque}} />
          <br>
          <br>
+         {{/if}}
          <div class="cg-tip"><AnsiFormat @text="Those who took the advantage of Scion Power in chargen need to set their scion here." /></div>
          <br>
          <p> <b>Scion Power:</b> </p>
