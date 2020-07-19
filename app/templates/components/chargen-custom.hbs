@@ -9,5 +9,8 @@
          <div class="cg-tip"><AnsiFormat @text="Those who took the advantage of Scion Power in chargen need to set their scion here." /></div>
          <br>
          <p> <b>Scion Power:</b> </p>
-         <Input @type="text" @size={{25}} @value={{char.scion}} />
+         <PowerSelect @selected={{char.scion}} @options={{scions}} @searchField="value" @allowClear={{true}} @onchange={{action "scionChanged"}} as |s|>
+         {{s.value}}
+         </PowerSelect>
+
 </div>
