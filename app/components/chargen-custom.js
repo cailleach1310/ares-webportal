@@ -10,8 +10,8 @@ export default Component.extend({
  
   scions: computed(function() {
      let list = [];
-     this.get('Global.custom.scions').forEach(function(g) {
-       list.push({ value: g });
+     this.get('Global.custom.scions').forEach(function(s) {
+       list.push({ value: s });
      });
      return list;
   }),
@@ -21,5 +21,12 @@ export default Component.extend({
     // 
     return { marque: this.get('char.marque'), 
             scion: this.get('char.scion') };
-  }
+  },
+  
+  actions: {
+        
+        scionChanged(val) {
+           this.set('model.char.custom.scion.value', val.value);
+        },
+
 });
