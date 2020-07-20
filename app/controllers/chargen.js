@@ -97,7 +97,11 @@ export default Controller.extend({
             
         },
         
-        fileUploaded(folder, name) {
+       scionChanged(val) {
+           this.set('model.char.custom.scion.value', val.value);
+        },
+
+      fileUploaded(folder, name) {
           folder = folder.toLowerCase();
           name = name.toLowerCase();
           this.set('model.char.profile_image', `${folder}/${name}`);
