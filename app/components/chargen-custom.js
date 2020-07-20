@@ -33,7 +33,7 @@ export default Component.extend({
 
   actions: {      
            scionChanged(val) {
-           this.set('model.char.custom.scion.value', val.value);
+           this.set('char.scion.value', val.value);
         },
    },
 
