@@ -9,12 +9,7 @@ export default Component.extend({
     this.set('updateCallback', function() { return self.onUpdate(); } );
   },
 
-//  scions: computed(function() {
-//    let scionlist = ["Anael", "Azza", "Camael", "Elua", "Eisheth", "Kushiel", "Naamah", "Shemhazai"];
-//    return scionlist;
-//  }),  
-    
- scions: computed(function() {
+  scions: computed(function() {
     let list = [];
     let scionlist = ["Anael", "Azza", "Camael", "Eisheth", "Elua", "Kushiel", "Naamah", "Shemhazai"];
      scionlist.forEach(function(s) {
@@ -33,7 +28,7 @@ export default Component.extend({
 
   actions: {      
            scionChanged(val) {
-           this.set('char.scion.value', val.value);
+           this.set('char.scion', val.value);
         },
    },
 
