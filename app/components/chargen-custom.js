@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { computed, action } from '@ember/object';
 
 export default Component.extend({
   tagName: '',
@@ -11,7 +11,7 @@ export default Component.extend({
  
 scions: computed(function() {
      let list = [];
-     custom.scions.forEach(function(s) {
+     this.get('model.custom.scions').forEach(function(s) {
        list.push({ value: s });
      });
      return list;
