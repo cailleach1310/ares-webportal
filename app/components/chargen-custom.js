@@ -9,9 +9,10 @@ export default Component.extend({
     this.set('updateCallback', function() { return self.onUpdate(); } );
   },
 
-  scions: function() {
-    return ['Anael', 'Azza','Camael', 'Elua','Eisheth', 'Kushiel', 'Naamah', 'Shemhazai'];
-  },  
+  scions: computed(function() {
+    let scionlist = ['Anael', 'Azza','Camael', 'Elua','Eisheth', 'Kushiel', 'Naamah', 'Shemhazai'];
+    return scionlist;
+  }),  
     
 // scions: computed(function() {
 //     let list = [];
