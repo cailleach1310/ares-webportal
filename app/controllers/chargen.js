@@ -97,10 +97,6 @@ export default Controller.extend({
             
         },
         
-       scionChanged(val) {
-           this.set('model.char.scion.value', val.value);
-        },
-
       fileUploaded(folder, name) {
           folder = folder.toLowerCase();
           name = name.toLowerCase();
