@@ -3,13 +3,13 @@
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{char.marque}} />
+         <Input @type="integer" @size={{25}} @value={{model.char.marque}} />
          <br>
          <br>
          <div class="cg-tip"><AnsiFormat @text="Those who took the advantage of Scion Power in chargen need to set their scion here." /></div>
          <br>
          <p> <b>Scion Power:</b> </p>
-         <PowerSelect @selected={{model.char.custom.scion}} @options={{scions}} @searchField="value" @allowClear={{true}} @onchange={{action "scionChanged"}} as |s|>
+         <PowerSelect @selected={{model.char.scion}} @options={{scions}} @searchField="value" @allowClear={{true}} @onchange={{action "scionChanged"}} as |s|>
          {{s.value}}
          </PowerSelect>
 
