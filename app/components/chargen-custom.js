@@ -16,7 +16,7 @@ export default Component.extend({
     
  scions: computed(function() {
     let list = [];
-    let scionlist = ["Anael", "Azza", "Camael", "Elua", "Eisheth", "Kushiel", "Naamah", "Shemhazai"];
+    let scionlist = ["Anael", "Azza", "Camael", "Eisheth", "Elua", "Kushiel", "Naamah", "Shemhazai"];
      scionlist.forEach(function(s) {
        list.push({ value: s });
      });
@@ -33,7 +33,7 @@ export default Component.extend({
 
  actions: {      
            scionChanged(val) {
-           this.set('model.char.custom.scion.value', val.value);
+           this.set('scion.value', val.value);
         },
    },
 
