@@ -10,7 +10,7 @@
          <br>
          <p> <b>Scion Power:</b> </p>
          <PowerSelect @selected={{model.char.custom.scion}} @options={{scions}} @searchField="value" @allowClear={{true}} @onchange={{action "scionChanged"}} as |s|>
-         {{s}}
+         {{s.value}}
          </PowerSelect>
 
 </div>
