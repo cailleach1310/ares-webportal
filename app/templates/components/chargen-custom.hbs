@@ -4,5 +4,11 @@
          <br>
          <p> <b>Marque Status (%):</b> </p>
          <Input @type="integer" @size={{25}} @value={{char.custom.marque}} />
+         <br>
+         <br>
+         <div class="cg-tip"><AnsiFormat @text="If you took the advantage connections, please specify these connections below. You can either take one area per dot of the advantage or use all the dots on one area alone. Available options are: Council, Night Court, Merchants, Underworld, but also more precise options like <name of House>." /></div>
+         <br>
+         <p> <b>Connections: (%):</b> </p>
+         <Input @type="text" @size={{25}} @value={{char.custom.connections}} />
 
 </div>
