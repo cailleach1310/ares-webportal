@@ -1,16 +1,3 @@
-<div id="special" class="tab-pane fade">
-  {{#if char.goals}}
-      <p> <b>Character Goals:</b> </p>
-      {{{ansi-format text=char.goals}}}
-  {{/if}} 
-
-  {{#if char.connections}}
-      <p> <b>Connections:</b> </p>
+<div id="connections" class="tab-pane fade">
      {{{ansi-format text=char.custom.connections}}}
-  {{/if}} 
-
-  {{#if char.marque}}
-      <p> <b>Marque Status (%):</b> </p>
-      The marque is currently at {{{ansi-format text=char.marque}}} percent.
-  {{/if}} 
-</div>
+  </div>
