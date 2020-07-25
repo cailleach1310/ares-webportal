@@ -60,7 +60,6 @@
        <li role="presentation"><a href="#icon" aria-controls="misc" role="tab" data-toggle="tab">Profile Icon</a></li>
        <li role="presentation"><a href="#descs" aria-controls="misc" role="tab" data-toggle="tab">Descriptions</a></li>
        <li role="presentation"><a href="#lastwill" aria-controls="misc" role="tab" data-toggle="tab">Last Will</a></li>
-       <li role="presentation"><a href="#systemgoals" aria-controls="misc" role="tab" data-toggle="tab">Character Goals</a></li>
        <ChargenCustomTabs @char={{model}} />
      </ul>
      
@@ -179,14 +178,6 @@
                <MarkdownEditor @text={{model.char.lastwill}} />
            </div>
            
-          <div role="tabpanel" class="tab-pane" id="systemgoals">
-                      
-             <div class="cg-tip"><AnsiFormat @text="You can set some character goals here. It is not mandatory, and goals can be added or edited even after getting approved." /></div>
-             <br>
-             <p> <b>Character Goals:</b> </p>
-             <MarkdownEditor @text={{model.char.goals}} />
-          </div>
-    
         <ChargenCustom @char={{model.char}} @cgInfo={{model.cgInfo}} @updateCallback={{customUpdateCallback}} />	
 
        </div>	
