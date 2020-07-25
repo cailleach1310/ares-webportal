@@ -1,4 +1,12 @@
-<div role="tabpanel" class="tab-pane" id="special">
+  <div role="tabpanel" class="tab-pane" id="systemgoals">
+                      
+         <div class="cg-tip"><AnsiFormat @text="You can set some character goals here. It is not mandatory, and goals can be added or edited even after getting approved." /></div>
+         <br>
+         <p> <b>Character Goals:</b> </p>
+          <MarkdownEditor @text={{model.char.goals}} />
+ </div>
+
+ <div role="tabpanel" class="tab-pane" id="special">
 
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
