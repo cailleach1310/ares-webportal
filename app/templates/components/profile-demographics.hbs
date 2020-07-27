@@ -32,14 +32,16 @@
         
         
         {{#each char.groups as |group|}}
-        <div class="row">
+        {{#if group}}
+          <div class="row">
             <div class="col-sm-4">
                     <b>{{group.name}}</b> 
             </div>
             <div class="col-sm-8">
                     {{group.value}}
             </div>
-        </div>
+          </div>
+        {{/if}}
         {{/each}}
 
 
