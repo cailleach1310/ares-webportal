@@ -17,7 +17,7 @@
          <br>
          <br>
       {{/if}}
-     {{#if (Custom.set_connections?(Model.char)) }}
+     {{#if (model.char.custom.set_connections?(Model.char)) }}
          <div class="cg-tip"><AnsiFormat @text="As you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
          <br>
          <p> <b>Connections:</b> </p>
