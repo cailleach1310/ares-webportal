@@ -6,15 +6,14 @@
           <MarkdownEditor @text={{char.custom.goals}} />
  </div>
 
- <div role="tabpanel" class="tab-pane" id="special">
+ <div role="tabpanel" class="tab-pane" id="systemmarque">
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
          <Input @type="integer" @size={{25}} @value={{char.custom.marque}} />
-         <br>
-         <br>
-         <br>
-         <br>
+ </div>
+
+ <div role="tabpanel" class="tab-pane" id="connections">
         <div class="cg-tip"><AnsiFormat @text="If you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
          <br>
          <p> <b>Connections:</b> </p>
