@@ -7,7 +7,7 @@
  </div>
 
  <div role="tabpanel" class="tab-pane" id="special">
-     {{#if (eq Model.char.ranks_rank "Adept") }}
+     {{#if (model.char.custom.is_adept?) }}
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
@@ -17,8 +17,10 @@
          <br>
          <br>
       {{/if}}
-         <div class="cg-tip"><AnsiFormat @text="As you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
+      {{#if (model.char.custom.set_connections?) }}
+        <div class="cg-tip"><AnsiFormat @text="As you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
          <br>
          <p> <b>Connections:</b> </p>
          <MarkdownEditor @text={{char.custom.connections}} />
+      {{/if}}
 </div>
