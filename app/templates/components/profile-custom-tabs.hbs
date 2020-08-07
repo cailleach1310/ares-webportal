@@ -1,6 +1,6 @@
-{{#if (not (eq char.custom.goals "")) }}
+{{#unless (eq char.custom.goals "") }}
 <li><a data-toggle="tab" href="#systemgoals">Character Goals</a></li> 
-{{/if}}
+{{/unless}}
 
 {{#if char.custom.marque}}
 <li><a data-toggle="tab" href="#systemmarque">Marque</a></li> 
