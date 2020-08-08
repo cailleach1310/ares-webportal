@@ -8,13 +8,14 @@ export default Component.extend({
     },
   
   has_goals: function() {
-    let g = false;
-    if ('char.custom.goals') {
-      if ('char.custom.goals' != "") {
-        g = true;
-      }
+    let goals = this.get('model.char.custom.goals');
+    
+    if (goals) {
+       return (goals != "") 
     }
-    return g;
+    else {
+      return false;
+    }
   },
   
   no_connections: function() {
