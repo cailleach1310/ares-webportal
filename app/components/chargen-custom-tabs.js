@@ -9,10 +9,10 @@ export default Component.extend({
     },
 
   is_adept: computed('model', function() {
-     let groups = this.get('model.char.groups');
+     let myrank = get model.char.groups 'Rank';
      let isAdept = false;
      
-     if ((groups['Rank'].value) && (groups['Rank'].value == 'Adept')) {
+     if ((myrank) && (myrank == 'Adept')) {
            isAdept = true;
        } 
     return isAdept;    
