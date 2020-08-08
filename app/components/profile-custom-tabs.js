@@ -17,8 +17,14 @@ export default Component.extend({
     return g;
   },
   
-  has_connections: function() {
-      return Boolean('char.custom.connections');
+  no_connections: function() {
+    let c = true;
+    if ('char.custom.connections') {
+      if ('char.custom.connections' != "") {
+        c = false;
+      }
     }
+    return c;
+  }
   
 });
