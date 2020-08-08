@@ -5,19 +5,18 @@ export default Component.extend({
   
   has_connections: function() {
       return Boolean(this.get('model.char.fs3.fs3_advantages').any(e => e == 'Connections')));
- //      return true;
     },
 
   is_adept: function() {
-//     let groups = this.get('model.char.groups');
+     let groups = this.get('model.char.groups');
      let isAdept = false;
      
- //    Object.keys(groups).forEach(g => {
- //       if (groups[g].value == 'Adept') {
- //           isAdept = true;
- //       } 
-  //   });
-     return isAdept;    
+    Object.keys(groups).forEach(g => {
+       if (groups[g].value == 'Adept') {
+           isAdept = true;
+       } 
+    });
+    return isAdept;    
   }
   
 });
