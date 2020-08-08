@@ -8,8 +8,14 @@ export default Component.extend({
     },
   
   has_goals: function() {
-      return Boolean('char.custom.goals');
-    },
+    let g = false;
+    if ('char.custom.goals') {
+      if ('char.custom.goals' != "") {
+        g = true;
+      }
+    }
+    return g;
+  },
   
   has_connections: function() {
       return Boolean('char.custom.connections');
