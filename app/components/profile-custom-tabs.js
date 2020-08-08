@@ -4,15 +4,15 @@ export default Component.extend({
   tagName: '',
   
   has_marque: function() {
-      return Boolean('model.char.custom.marque');
+      return Boolean('char.custom.marque');
     },
   
   has_goals: function() {
-      return Boolean('model.char.custom.goals');
+      return Boolean('char.custom.goals');
     },
   
   has_connections: function() {
-      return Boolean('model.char.custom.connections');
+      return Boolean('char.custom.connections');
     }
   
 });
