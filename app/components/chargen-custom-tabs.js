@@ -1,13 +1,14 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   tagName: '',
   
-  has_connections: function() {
+  has_connections: computed(function() {
       return Boolean(this.get('model.char.fs3.fs3_advantages').any(e => e == 'Connections')));
-    },
+    }),
 
-  is_adept: function() {
+  is_adept: computed(function() {
      let groups = this.get('model.char.groups');
      let isAdept = false;
      
@@ -17,6 +18,6 @@ export default Component.extend({
        } 
     });
     return isAdept;    
-  }
+  })
   
 });
