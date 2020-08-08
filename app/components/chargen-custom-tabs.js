@@ -10,7 +10,8 @@ export default Component.extend({
     }),
 
   is_adept: computed(function() {
-      return Boolean(this.get('model.char.ranks_rank') == 'Adept');
+     
+      return Boolean(this.get('model.char.groups['rank']) == 'Adept');
     })
   
 });
