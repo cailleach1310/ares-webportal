@@ -10,5 +10,6 @@ export default Component.extend({
 
   is_adept: computed(function() {
       return Boolean(this.get('model.char.ranks_rank') == 'Adept');
-    }),
+    })
+  
 });
