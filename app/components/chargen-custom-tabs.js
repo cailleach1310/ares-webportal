@@ -5,13 +5,20 @@ export default Component.extend({
   tagName: '',
   
   has_connections: computed(function() {
-//      return Boolean(this.get('model.char.fs3.fs3_advantages').any(e => e == 'connections')));
+//      return Boolean(this.get('model.char.fs3.fs3_advantages').any(e => e == 'Connections')));
        return true;
     }),
 
   is_adept: computed(function() {
+     let groups = this.get('model.char.groups');
+     let isAdept = false;
      
-      return Boolean(this.get('model.char.groups['rank']) == 'Adept');
-    })
+     Object.keys(groups).forEach(g => {
+        if (!groups[g].value == 'Adept') {
+            isAdept = true;
+        } 
+     });
+     return isAdept;    
+  })
   
 });
