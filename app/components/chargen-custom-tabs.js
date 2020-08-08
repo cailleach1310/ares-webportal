@@ -12,7 +12,7 @@ export default Component.extend({
      let groups = this.get('model.char.groups');
      let isAdept = false;
      
-     if ((groups["rank"].value) && (groups['Rank'].value == 'Adept')) {
+     if ((groups['Rank'].value) && (groups['Rank'].value == 'Adept')) {
            isAdept = true;
        } 
     return isAdept;    
