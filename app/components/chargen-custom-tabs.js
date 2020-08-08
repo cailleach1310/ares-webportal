@@ -14,7 +14,6 @@ export default Component.extend({
      if ((groups["rank"].value) && (groups["rank"].value == 'Adept')) {
            isAdept = true;
        } 
-    });
     return isAdept;    
   }
   
