@@ -9,23 +9,12 @@ export default Component.extend({
   
   has_goals: function() {
     let goals = this.get('model.char.custom.goals');
-    
-    if (goals) {
-       return (goals != "");
-    }
-    else {
-      return false;
-    }
+    return ((goals != nil) && (goals != ""));
   },
   
   no_connections: function() {
-    let c = true;
-    if ('char.custom.connections') {
-      if ('char.custom.connections' != "") {
-        c = false;
-      }
-    }
-    return c;
+    let con = this.get('model.char.custom.connections');
+    return ((con == nil) || (con == ""));
   }
   
 });
