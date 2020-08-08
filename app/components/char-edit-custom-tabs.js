@@ -5,9 +5,9 @@ export default Component.extend({
 });
 
 has_connections: computed(function() {
-      return (this.get('model.char.fs3.fs3_advantages').any(e => e == 'connections'));
+      return (this.get('model.char.fs3_advantages').any(e => e == 'connections'));
     });
 
 is_adept: computed(function() {
-      return (this.get('model.char.rank') == "Adept");
+      return (this.get('model.char.ranks_rank') == "Adept");
     });
