@@ -10,8 +10,7 @@ export default Component.extend({
     },
 
   is_adept: computed('model', function() {
-     let groups = this.get('model.char.groups');
-     let myrank = get(groups,'Rank');
+     let myrank = this.get('model.char.groups').any(e => e == 'Rank'));
      let isAdept = false;
      
      if ((myrank) && (myrank == 'Adept')) {
