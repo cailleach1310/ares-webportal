@@ -6,4 +6,4 @@ export default Component.extend({
 
 is_adept: computed(function() {
       return this.get('model.char.fs3.fs3_advantages').any(e => e == 'connections');
-    }),
+    });
