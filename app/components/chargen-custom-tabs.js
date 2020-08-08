@@ -14,7 +14,7 @@ export default Component.extend({
      let isAdept = false;
      
      Object.keys(groups).forEach(g => {
-        if (!groups[g].value == 'Adept') {
+        if (groups[g].value == 'Adept') {
             isAdept = true;
         } 
      });
