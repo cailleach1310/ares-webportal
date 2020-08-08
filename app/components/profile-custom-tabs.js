@@ -11,7 +11,7 @@ export default Component.extend({
     let goals = this.get('model.char.custom.goals');
     
     if (goals) {
-       return (goals != "") 
+       return (goals != "");
     }
     else {
       return false;
