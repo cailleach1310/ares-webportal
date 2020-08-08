@@ -1,7 +1,6 @@
-imhas_connectionsponent from '@ember/component';
+import Component from '@ember/component';
 
 export default Component.extend(,
-
   tagName: ''
 });
 
