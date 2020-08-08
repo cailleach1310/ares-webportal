@@ -1,4 +1,4 @@
-{{#if has_goals}}
+{{#if char.custom.goals}}
 <li><a data-toggle="tab" href="#systemgoals">Character Goals</a></li> 
 {{/if}}
 
@@ -6,6 +6,6 @@
 <li><a data-toggle="tab" href="#systemmarque">Marque</a></li> 
 {{/if}}
 
-{{#unless no_connections}}
+{{#if char.custom.connections}}
 <li><a data-toggle="tab" href="#connections">Connections</a></li> 
-{{/unless}}
+{{/if}}
