@@ -10,13 +10,6 @@ export default Component.extend({
     }),
 
   is_adept: computed(function() {
-//      let myrank = this.get('model.char.groups','rank');
-    let myrank = "Adept";
-    if myrank {               
-          return (myrank == "Adept");
-      } else {
-          return false;
-      } 
+    return (get (get model.char.groups 'Rank') 'Adept'));
   })
-  
 });
