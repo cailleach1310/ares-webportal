@@ -9,7 +9,7 @@ export default Component.extend({
       return this.get('model.char.fs3.fs3_advantages').any(e => e == 'connections');
     }),
 
-  is_adept: computed(function() {
+  is_adept: computed('model', function() {
     let groups = this.get('model.char.groups');
     let key = 'Rank';
     if ((groups[key].value) && (groups[key].value == "Adept")) {
