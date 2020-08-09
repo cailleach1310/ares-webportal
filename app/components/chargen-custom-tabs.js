@@ -11,7 +11,8 @@ export default Component.extend({
 
   is_adept: computed(function() {
     let groups = this.get('model.char.groups');
-    if (groups['Rank'].value == "Adept") {
+    let key = 'Rank';
+    if ((groups[key].value) && (groups[key].value == "Adept")) {
        return true;
     } else {
       return false;
