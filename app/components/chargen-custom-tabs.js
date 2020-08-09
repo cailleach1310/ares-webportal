@@ -10,12 +10,12 @@ export default Component.extend({
     }),
 
   is_adept: computed('model', function() {
-    let groups = this.get('model.char.groups');
-    let key = "Rank";
-    if ((groups[key].value) && (groups[key].value == "Adept")) {
+//    let groups = this.get('model.char.groups');
+//    let key = "Rank";
+//    if ((groups[key].value) && (groups[key].value == "Adept")) {
        return true;
-    } else {
-      return false;
-    }
+//    } else {
+//      return false;
+//    }
   })
 });
