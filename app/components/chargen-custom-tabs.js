@@ -5,8 +5,8 @@ import { get } from '@ember/object';
 export default Component.extend({
   tagName: '',
   
-  has_connections: computed('model.char.fs3.fs3_advantages', function() {
-      return this.get('model.char.fs3.fs3_advantages').any(e => e == 'Connections');
+  has_connections: computed('char.fs3.fs3_advantages', function() {
+      return this.get('char.fs3.fs3_advantages').any(e => e == 'Connections');
     }),
 
   is_adept: computed('model.char.groups', function() {
