@@ -9,8 +9,8 @@ export default Component.extend({
       return this.get('char.fs3.fs3_advantages').any(e => e == 'Connections');
     }),
 
-  is_adept: computed('model.char.groups', function() {
-    let myrank = this.get('model.char.groups').any(r => r == 'rank');
+  is_adept: computed('char.groups', function() {
+    let myrank = this.get('char.groups').any(r => r == 'rank');
     return (myrank.value == "Adept");
   })
 });
