@@ -11,6 +11,6 @@ export default Component.extend({
 
   is_adept: computed('model.char.groups', function() {
     let myrank = this.get('model.char.groups').any(r => r == 'rank');
-    return (myrank.value == "Adept")
+    return (myrank.value == "Adept");
   })
 });
