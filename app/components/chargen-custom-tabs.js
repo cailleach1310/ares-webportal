@@ -10,7 +10,7 @@ export default Component.extend({
     }),
 
   is_adept: computed('char.groups', function() {
-    let myrank = this.get('char.groups').any(r => r == 'rank');
-    return (myrank.value == "Adept");
+    let groups = this.get('char.groups');
+    return (groups['rank'].value == "Adept");
   })
 });
