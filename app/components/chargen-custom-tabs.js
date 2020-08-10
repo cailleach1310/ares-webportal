@@ -5,11 +5,11 @@ import { get } from '@ember/object';
 export default Component.extend({
   tagName: '',
   
-  has_connections: computed('char.fs3.fs3_advantages', function() {
+  has_connections: computed('model', function() {
       return this.get('char.fs3.fs3_advantages').any(e => e == 'Connections');
     }),
 
-  is_adept: computed('model.char.groups["rank"]', function() {
+  is_adept: computed('model', function() {
     return ('model.char.groups["rank"].value' == "Adept");
   })
 });
