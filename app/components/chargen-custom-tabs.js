@@ -9,7 +9,7 @@ export default Component.extend({
 //      return this.get('char.fs3.fs3_advantages').any(e => e == 'Connections');
 //    }),
 //
-//  is_adept: computed('model', function() {
-//    return ('model.char.groups["rank"].value' == "Adept");
-//  })
+  is_adept: computed('model', function() {
+    return ('model.char.groups["Rank"].value' == "Adept");
+  })
 });
