@@ -17,7 +17,15 @@
          <Input @type="integer" @size={{25}} @value={{char.custom.cg_adept}} />
          <br>
          <p> <b>Test Field 2 (cg_connections):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{has_connections}} />
+         <Input @type="integer" @size={{25}} @value={{char.custom.cg_connections}} />
+         <br>
+         {{#if is_adept}}
+         <p> <b>Test Field 3 (is_adept): Test OK!</b> </p>
+         <br>
+         {{/if}}
+         {{#if has_connections}}
+         <p> <b>Test Field 4 (has_connections): Test OK!</b> </p>
+         {{/if}}
 </div>
 
  <div role="tabpanel" class="tab-pane" id="connections">
