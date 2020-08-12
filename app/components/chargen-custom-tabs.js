@@ -3,11 +3,13 @@ import { computed } from '@ember/object';
 import { get } from '@ember/object';
 
 export default Component.extend({
-  tagName: ''
+  tagName: '',
   
-//  has_connections: computed('model', function() {
-//      return this.get('char.fs3.fs3_advantages').any(e => e == 'Connections');
-//    }),
+  has_connections: computed(function() {
+     return (char.custom.cg_connections != nil);
+  })
+       ;
+    }),
 //
 //  is_adept: computed('model', function() {
 //    return ('model.char.groups["Rank"].value' == "Adept");
