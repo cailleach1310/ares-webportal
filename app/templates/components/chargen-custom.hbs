@@ -10,6 +10,7 @@
          <div class="cg-tip"><AnsiFormat @text="Some concepts need to set additional information in the space below. Please note: You may have to save your changes and refresh the page before these additional fields will show." /></div>
          <br>
          {{#if char.custom.cg_adept}}
+         <hr>
          <br>
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
@@ -19,6 +20,8 @@
          {{/if}}
          <br>
          {{#if char.custom.cg_connections}}
+         <hr>
+         <br>
          <div class="cg-tip"><AnsiFormat @text="If you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
          <br>
          <p> <b>Connections:</b> </p>
