@@ -7,10 +7,9 @@ export default Component.extend({
   
   has_connections: computed(function() {
      return Boolean(char.custom.cg_connections);
-  })
+  }),
 
-//
-//  is_adept: computed('model', function() {
-//    return ('model.char.groups["Rank"].value' == "Adept");
-//  })
+  is_adept: computed(function() {
+    return Boolean(char.custom.cg_adept);
+  })
 });
