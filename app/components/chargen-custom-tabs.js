@@ -6,7 +6,7 @@ export default Component.extend({
   tagName: '',
   
   has_connections: computed(function() {
-     return (char.custom.cg_connections != nil);
+     return Boolean(char.custom.cg_connections);
   })
        ;
     }),
