@@ -6,31 +6,19 @@
           <MarkdownEditor @text={{char.custom.goals}} />
  </div>
 
- <div role="tabpanel" class="tab-pane" id="systemmarque">
+ <div role="tabpanel" class="tab-pane" id="special">
+         {{#if char.custom.cg_adept}}
          <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
          <br>
          <p> <b>Marque Status (%):</b> </p>
          <Input @type="integer" @size={{25}} @value={{char.custom.marque}} />
          <br>
-         <br>
-         <p> <b>Test Field 1 (cg_adept):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{char.custom.cg_adept}} />
-         <br>
-         <p> <b>Test Field 2 (cg_connections):</b> </p>
-         <Input @type="integer" @size={{25}} @value={{char.custom.cg_connections}} />
-         <br>
-         {{#if char.custom.cg_adept}}
-         <p> <b>Test Field 3 (is_adept): Test OK!</b> </p>
-         <br>
          {{/if}}
+         <br>
          {{#if char.custom.cg_connections}}
-         <p> <b>Test Field 4 (has_connections): Test OK!</b> </p>
-         {{/if}}
-</div>
-
- <div role="tabpanel" class="tab-pane" id="connections">
-        <div class="cg-tip"><AnsiFormat @text="If you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
+         <div class="cg-tip"><AnsiFormat @text="If you took the advantage connections, please specify these connections below, along with a brief explanation." /></div>
          <br>
          <p> <b>Connections:</b> </p>
          <MarkdownEditor @text={{char.custom.connections}} />
+         {{/if}}
 </div>
